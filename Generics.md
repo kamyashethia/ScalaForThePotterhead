@@ -1,3 +1,5 @@
+# Generics 
+
 Before diving into Generics, let's talk about something a bit more benign ... like Horcruxes.
 
 A Horcrux is a magical object used to store a piece of a person's soul.
@@ -99,6 +101,8 @@ scala
 
 Our code fails with an error that is a lot harder to understand, as opposed to the neat type error we saw earlier. 
 
-Generics are a powerful programming tool. 
+
+---
 You can check the full code sample here:  <CODE SAMPLE TO BE UPLOADED>
-You can read more about generic classes in the official scaladoc: https://docs.scala-lang.org/tour/generic-classes.html and about magical objects in this wikipedia entry: https://en.wikipedia.org/wiki/Magical_objects_in_Harry_Potter  
+You can read more about generic classes in the official scaladoc: https://docs.scala-lang.org/tour/generic-classes.html
+This fantastic wikipenedia entry is a fun read about magical objects: https://en.wikipedia.org/wiki/Magical_objects_in_Harry_Potter  

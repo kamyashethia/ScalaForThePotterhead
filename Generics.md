@@ -7,17 +7,20 @@ Not all magical objects are nefarious, like the Remembrall, a small orb which tu
 Let's represent some magical objects in Scala: 
 
 ```scala
-class MagicalObject
+class MagicalObject {
+  val isDangerous: Boolean = false;
+}
 
 //When all 3 hallows are owned by one wizard, the owner is said to have mastery over death
-class DeathlyHallows extends MagicalObject
-
+class DeathlyHallows extends MagicalObject {
+  override val isDangerous: Boolean = true;
+}
 //The smoke contained inside the remembrall turns red if it's owner has forgotten something
 class Remembrall extends MagicalObject
-
 //An object containing a piece of a human soul
 class Horcrux extends MagicalObject {
   var isDestroyed = false
+  override val isDangerous: Boolean = true;
 }
 
 //A magical map of Hogwarts
@@ -79,4 +82,23 @@ scala> val magicalObjectsOwnedByHarry: List[MagicalObject] = List(elderWand, mar
         required: MagicalObject
 ```
 
+You might be tempted to solve for the compile error by removing the type altogether. While this might make our code compile, it might fail later anyway with an error that is harder to debug. 
 
+Consider the following snippet where we try and find all the dangerous objects owned by Harry. 
+
+```sh 
+scala> scala> val magicalObjectsOwnedByHarryWithoutGenericType = List(elderWand, maraudersMap, riddleDiary, invisibilityCloak, "Non-magical kettle")
+magicalObjectsOwnedByHarryWithoutGenericType: List[Object] = List(ElderWand@772357e9, MaraudersMap@22ccd80f, RiddleDiary@45b7b254, InvisibilityCloak@3b47178c, Non-magical kettle)
+
+scala> val dangerousObjects = magicalObjectsOwnedByHarryWithoutStrongTypes.filter(magicObject => magicObject.isDangerous)
+                                                                                                             ^
+       error: value isDangerous is not a member of Object
+
+scala
+```
+
+Our code fails with an error that is a lot harder to understand, as opposed to the neat type error we saw earlier. 
+
+Generics are a powerful programming tool. 
+You can check the full code sample here:  <CODE SAMPLE TO BE UPLOADED>
+You can read more about generic classes in the official scaladoc: https://docs.scala-lang.org/tour/generic-classes.html and about magical objects in this wikipedia entry: https://en.wikipedia.org/wiki/Magical_objects_in_Harry_Potter  

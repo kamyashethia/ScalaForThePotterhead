@@ -51,22 +51,32 @@ class MarvoloGauntRing extends Horcrux
 Let's create a list of magical objects that have been owned by the famous Harry Potter. Below is some scala code that does just that:
 
 ```scala
-val ownedByHarry: List[MagicalObject] = List(elderWand, maraudersMap, riddleDiary, invisibilityCloak)
+val magicalObjectsOwnedByHarry: List[MagicalObject] = List(elderWand, maraudersMap, riddleDiary, invisibilityCloak)
 
 ```
 
-Let's zoom in on the type of the variable `ownedByHarry`. It is a List that accepts elements of the type Magical Object. Scala implements the List type as a Generic class, which allows us to do this. 
+Let's zoom in on the type of the variable `magicalObjectsOwnedByHarry`. It is a List that accepts elements of the type MagicalObject. Scala implements the List type as a Generic class, which allows us to do this. 
 
 Let's confirm that the scala compiler is happy with our code: 
 
 ```sh 
-scala> val ownedByHarry: List[MagicalObject] = List(elderWand, maraudersMap, riddleDiary, invisibilityCloak)
+scala> val magicalObjectsOwnedByHarry: List[MagicalObject] = List(elderWand, maraudersMap, riddleDiary, invisibilityCloak)
 
-ownedByHarry: List[MagicalObject] = List(ElderWand@66032b8d, MaraudersMap@1fb66050, RiddleDiary@28068327, InvisibilityCloak@65c2610f)
+magicalObjectsOwnedByHarry: List[MagicalObject] = List(ElderWand@66032b8d, MaraudersMap@1fb66050, RiddleDiary@28068327, InvisibilityCloak@65c2610f)
 
 ```
 
+Generics is sometimes known as Parametric Polymorphism. It helps us write code that is more expressive and promotes code reusability without compromising type safety.
+When we use Generics, the scala compiler will be able to detect any unexpected type errors at compile time. 
 
+In our example, if we try to insert a nonmagical item, the scala compiler will immediately alert us that there is an error with our code.
 
+```sh 
+scala> val magicalObjectsOwnedByHarry: List[MagicalObject] = List(elderWand, maraudersMap, riddleDiary, invisibilityCloak, "Non-magical kettle")
+                                                                                                                           ^
+       error: type mismatch;
+        found   : String("Non-magical kettle")
+        required: MagicalObject
+```
 
 

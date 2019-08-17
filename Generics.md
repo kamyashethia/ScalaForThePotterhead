@@ -103,6 +103,6 @@ Our code fails with an error that is a lot harder to understand, as opposed to t
 
 
 ---
-You can check the full code sample here:  <CODE SAMPLE TO BE UPLOADED>
-You can read more about generic classes in the official scaladoc: https://docs.scala-lang.org/tour/generic-classes.html
-This fantastic wikipenedia entry is a fun read about magical objects: https://en.wikipedia.org/wiki/Magical_objects_in_Harry_Potter  
+* You can check the full code sample  [https://github.com/kamyashethia/ScalaForThePotterhead/blob/Generics/GenericsExample.scala](here)
+* You can read more about generic classes in the official scaladoc: https://docs.scala-lang.org/tour/generic-classes.html
+* This fantastic wikipenedia entry is a fun read about magical objects: https://en.wikipedia.org/wiki/Magical_objects_in_Harry_Potter  

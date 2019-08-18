@@ -105,4 +105,4 @@ Our code fails with an error that is a lot harder to understand, as opposed to t
 ---
 * You can check the full code sample [here](https://github.com/kamyashethia/ScalaForThePotterhead/blob/Generics/GenericsExample.scala)
 * You can read more about generic classes in the official [scaladoc](https://docs.scala-lang.org/tour/generic-classes.html)
-* [This](https://en.wikipedia.org/wiki/Magical_objects_in_Harry_Potter) fantastic wikipenedia entry is a fun read about magical objects:   
+* [This](https://en.wikipedia.org/wiki/Magical_objects_in_Harry_Potter) fantastic wikipedia entry is a fun read about magical objects:   

@@ -49,11 +49,11 @@ Now a wizard walks in, and asks for a wand. The wizard is tall, and the apprenti
 Let's look at some code that does just that: 
 
 ```scala 
-1. //print all wands with length > 7 inches
-2. val wandsLongerThan7Inches: List[wand] = for {
-3.  wand <- wands
-4. //guard expression
-5. } yield wand
+//print all wands with length > 7 inches
+val wandsLongerThan7Inches: List[wand] = for {
+  wand <- wands
+  if wand.length > 7
+} yield wand
 
 ```
 

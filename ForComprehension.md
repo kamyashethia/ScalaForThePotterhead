@@ -106,7 +106,7 @@ We've learnt about For comprehensions! You can find links below to learn more ab
 Thanks for reading!
 ___
 
-1. All the example code on [github](https://github.com/kamyashethia/ScalaForThePotterhead/blob/yield-keyword/ForComprehension.scala)
+1. All the example code on [github](https://github.com/kamyashethia/ScalaForThePotterhead/blob/master/ForComprehension.scala)
 2. [This](https://www.pottermore.com/features/the-great-wand-o-graphic) neat wand-o-graphic from pottermore
 3. Official documentation about [for comprehensions](https://docs.scala-lang.org/tour/for-comprehensions.html) 
 4. [These](https://alvinalexander.com/scala/scala-for-loop-yield-examples-yield-tutorial) examples of for loops from the author of the scala cookbook

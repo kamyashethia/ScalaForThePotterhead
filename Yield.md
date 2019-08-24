@@ -1,6 +1,6 @@
 # For Comprehensions
 
-Let's talk about for loops in Scala. We use a lot of functional programming terms here, but don't let that scare you! We'll cover for loops, generator expressions, guards and yielding. 
+Let's talk about for loops in Scala. We use a lot terms here (some of which come from functional programming), but don't let that scare you! We'll cover for comprehensions, generator expressions, guards and yielding. 
 
 But first, let's talk about wands. Everyone knows that good wands are crafted from the finest wood, which is imbued with a token from a magical creature. Let's look at the wand class: 
 
@@ -39,8 +39,7 @@ val wands = List(wandA, wandB, wandC, wandD, wandE, wandF)
 
 ```
 
-Now a wizard walks in, and asks for a wand. The wizard is tall, and the apprentice knows right away that he will need to find a wand that is longer than 7 inches. 
-Let's look at some code that does just that: 
+Now, we want to find a wand for a particularly tall wizard. We know that he will require a wand that is greater than 7 inches in length. Let's look at some code that does that: 
 
 ```scala 
 //print all wands with length > 7 inches

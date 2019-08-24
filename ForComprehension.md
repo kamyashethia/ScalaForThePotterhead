@@ -58,11 +58,11 @@ This gives us access to individual elements of the `wands` list. In python we wo
 2. Guard (`if wand.length > 7`):
 A guard is just an `if` expression that helps us filter elements in the foor loop. In this case, we only want to keep wands that are greater than 7 inches.
 
-3. Yielding (`yield wand`) 
+3. Yielding (`yield wand`):  
 Yielding is a way to return values from the For comprehension. In this case, every time a wand passes the guard statement, we `yield` it to the `wandsLongerThan7Inches` List. 
 
 4. For comprehension: 
-This entire block is called a For comprehension. It's similar to a for loop in other programming languages, but we call it a comprehension because it can have side effects (in this case, populating the `wandsLongerThan7Inches` List. 
+This entire block is called a For comprehension. It's similar to a for loop in other programming languages, but we call it a comprehension because it can have side effects. In this case, the side effect is populating the `wandsLongerThan7Inches` List. 
 
 
 Let's see what the `wandsLongerThan7Inches` List looks like: 
@@ -101,8 +101,9 @@ res1: List[wand] = List(hazel wand of length 9 inches with veela hair, Cypress w
 
 Nice! The wizard only has to 'swish and flick' two wands, and wait for one of them to pick him! 
 
-We've learnt about For comprehensions! You can find links below to learn about for loops or for comprehensions. Happy learning! 
+We've learnt about For comprehensions! You can find links below to learn more about for comprehensions or magical wands. 
 
+Thanks for reading!
 ___
 
 1. All the example code on [github](https://github.com/kamyashethia/ScalaForThePotterhead/blob/yield-keyword/ForComprehension.scala)

@@ -1,6 +1,6 @@
 # For Comprehensions
 
-We'll cover For comprehensions, generator expressions, guards and yielding here, but first -- let's talk about wands. Everyone knows that good wands are crafted from the finest wood, and imbued with a token from a magical creature. Here is a wand class represented in Scala:
+We'll cover For comprehensions, generator expressions, guards and yielding in this tutorial. Before we dive in, let's talk about wands. Everyone knows that good wands are crafted from the finest wood, and imbued with a token from a magical creature. Here is a wand class represented in Scala:
 
 ```scala 
 class wand(typeOfWood: String, lengthOfWand: Long, magicalMaterial:String) {
@@ -83,8 +83,7 @@ scala> val wandsLongerThan7InchesWithMagicalCreatureHair: List[wand] = for {
   if wand.magic.contains("hair")
 } yield wand
 ```
-
-We have added a second guard condition. We can add multiple if statements in our guard if we choose to do so. In this case, we also have the option of simplifying the code and grouping the conditions: 
+We can add multiple if statements in our guard if we choose to do so. In this case, we also have the option of simplifying the code and grouping the conditions: 
 
 ```scala 
 scala> val wandsLongerThan7InchesWithMagicalCreatureHair: List[wand] = for {
@@ -93,14 +92,19 @@ scala> val wandsLongerThan7InchesWithMagicalCreatureHair: List[wand] = for {
 } yield wand
 ```
 
-Let's take a look at the result!
+This looks good, let's take a look at the result:
 
 ```sh
 scala> wandsLongerThan7InchesWithMagicalCreatureHair
 res1: List[wand] = List(hazel wand of length 9 inches with veela hair, Cypress wand of length 9 inches with kelpie hair)
 ```
 
-We've learnt about For comprehensions in Scala. Here are some cool links: 
+Nice! The wizard only has to 'swish and flick' two wands, and wait for one of them to pick him! 
+
+We've learnt about For comprehensions! You can find links below to learn about for loops or for comprehensions. Happy learning! 
+
+___
+
 1. All the example code on [github](https://github.com/kamyashethia/ScalaForThePotterhead/blob/yield-keyword/ForComprehension.scala)
 2. [This](https://www.pottermore.com/features/the-great-wand-o-graphic) neat wand-o-graphic from pottermore
 3. Official documentation about [for comprehensions](https://docs.scala-lang.org/tour/for-comprehensions.html) 

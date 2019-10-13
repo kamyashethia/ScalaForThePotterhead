@@ -119,9 +119,11 @@ This time, the function returns `Some(Expelliarmus())`. The value stored in `spe
 ____
 
 Options provide us with a handy way of representing missing values. Here are some links that you might find interesting: 
-1. [Null References - The Billion Dollar Mistake](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/)
+1. [Code on github](Options.scala)
 2. [Scaladocs on the Option abstract class](https://www.scala-lang.org/api/2.12.8/scala/Option.html)
 3. [Pottermore on Prior Incantato](https://pottermore.fandom.com/wiki/Prior_Incantato)
+4. [Null References - The Billion Dollar Mistake](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/)
+
 
 
 

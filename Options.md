@@ -19,7 +19,7 @@ case class Wand() {
 }
 ```
 
-If we needed to case the Prior Incantato spell on a wand, we might thing of implementing a function like this: 
+If we needed to cast the Prior Incantato spell on a wand, we might think of implementing a function like this: 
 
 ```scala 
 def PriorIncantato(wand:Wand): Spell = {
@@ -34,7 +34,7 @@ val wand = Wand()
 priorIncantato(wand)
 ```
 
-We would expect something to go very wrong if we tried this, and sure enough, we see an error. 
+We would probably expect something to go wrong if we tried this. Sure enough, we see a a runtime error: 
 
 ```sh
 scala> java.util.NoSuchElementException: last of empty ListBuffer
@@ -94,9 +94,9 @@ res8: Class[_ <: Option[Spell]] = class scala.None$
 
 ```
 
-Yay -- we don't have a runtime error anymore! We simply get back a `None`. 
+Yay -- we don't have a runtime error anymore! We simply get back a `class scala.None`, which represents to `None` class.
 
-Now, Let's see what happens if we cast some spells with our wand, and then call the `priorIncantato` function. 
+Let's cast a spell with our wand, and then call the `priorIncantato` function. 
 
 ```sh
 scala> wand.castSpell(expelliarmus)
@@ -105,17 +105,19 @@ Cast spell!
 scala> val spell = priorIncantato(wand)
 spell: Option[Spell] = Some(Expelliarmus())
 
+scala> spell.getClass
+res7: Class[_ <: Option[Spell]] = class scala.Some
+
 ```
 
-This time, the function returned `Some(Expelliarmus())`. 
+This time, the function returns `Some(Expelliarmus())`. The value stored in `spell` is an Instance of the `Some` class in scala.
 
-Bringing this together:
+`Option` is an abstract class in Scala, with two possible subclasses, `Some` or `None`.
+- This means that the `priorIncantaton(wand:Wand): Option[Spell]` function will return either `Some(Spell)` or `None`. 
+- In general, an `Option[A]` can either be `Some(A)` or `None`. 
 
-1. `Option` is an abstract class in Scala, with two possible subclasses, `Some` or `None`.
-2. This means that the `priorIncantaton(wand:Wand): Option[Spell]` function will return either `Some(Spell)` or `None`. 
-3. In general, an `Option[A]` can either be `Some(A)` or `None`. 
+____
 
-In Scala, you will encounter Options way more often than you will encounter `null`s. 
 Here are some links that you might find interesting: 
 1. [Null References - The Billion Dollar Mistake](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/)
 2. [Scaladocs on the Option abstract class](https://www.scala-lang.org/api/2.12.8/scala/Option.html)

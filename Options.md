@@ -71,11 +71,11 @@ java.lang.NullPointerException
   
  ```
  
-Scala's `Option` provides us with an abstraction for dealing with values that have the potential to be non-existent. Let's refactor the `priorIncantaton` function. 
+Scala's `Option` provides us with an abstraction for dealing with values that have the potential to be non-existent. Let's refactor the `priorIncantato` function. 
 
 ```scala 
 // We explicitly state that the function optionally returns a spell
-def priorIncantaton(wand:Wand): Option[Spell] = {
+def priorIncantato(wand:Wand): Option[Spell] = {
   // The lastOption function can be called on the ListBuffer. Instead of throwing a `NoSuchElementException`, the function will return None if the list is empty
   wand.spellsCast.lastOption
 }

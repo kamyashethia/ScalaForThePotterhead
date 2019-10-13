@@ -19,7 +19,7 @@ case class Wand() {
 }
 ```
 
-If we needed to case the Prior Incantato spell on a wand, we might thing of implementing a function that does so, like this: 
+If we needed to case the Prior Incantato spell on a wand, we might thing of implementing a function like this: 
 
 ```scala 
 def PriorIncantato(wand:Wand): Spell = {
@@ -27,7 +27,7 @@ def PriorIncantato(wand:Wand): Spell = {
 }
 ```
 
-Does this look right? Let's pause to think about what would happen if we called `priorIncantato` on a wand that has never cast a spell. 
+But wait, what would happen if we called `priorIncantato` on a wand that has never cast a spell. 
 
 ```scala 
 val wand = Wand() 
@@ -44,7 +44,7 @@ scala> java.util.NoSuchElementException: last of empty ListBuffer
 
 ```
 
-We tried to access the last element of an empty list, and the Scala compiler was unhappy. Now you might be tempted to just use null to fix this problem. Maybe you want to try something like this: 
+We tried to access the last element of an empty list, and the Scala compiler was unhappy. Now there might be some temptation to just use null to fix this problem. 
 
 ```scala 
 def priorIncantato(wand:Wand): Spell = {
@@ -55,26 +55,28 @@ def priorIncantato(wand:Wand): Spell = {
 }
 ```
 
-You wouldn't be wrong, the code would run! 
+The code above would work just fine!
+
  ```sh
  scala> val spell:Spell = priorIncantato(wand)
 spell: Spell = null
  ```
  
- But now, we have to remember the val `spell` contains a value, or a null. If we tried doing something with it, like trying to see what sort of spell was cast, we might get a frustrating `NullPointerException`.
+ But now, we have to remember the `val spell` could potentially be null. If we tried to use it, we might encounter a frustrating `NullPointerException`.
  
- ``sh 
+ ```sh 
  scala> spell.getClass
 java.lang.NullPointerException
   ... 28 elided
+  
  ```
  
-Let's try to do this using Scala's Options. The function would look like this: 
+Scala's `Option` provides us with an abstraction for dealing with values that have the potential to be non-existent. Let's refactor the `priorIncantaton` function. 
 
 ```scala 
 // We explicitly state that the function optionally returns a spell
-def priorIncantato(wand:Wand): Option[Spell] = {
-  // The lastOption function can be called on lists. This will not throw a `NoSuchElementException`, but 
+def priorIncantaton(wand:Wand): Option[Spell] = {
+  // The lastOption function can be called on the ListBuffer. Instead of throwing a `NoSuchElementException`, the function will return None if the list is empty
   wand.spellsCast.lastOption
 }
 ```
@@ -92,7 +94,9 @@ res8: Class[_ <: Option[Spell]] = class scala.None$
 
 ```
 
-There's no runtime error this time, we simply get back a `None`. Let's cast some spells with our wand, and then call the `priorIncantato` function. 
+Yay -- we don't have a runtime error anymore! We simply get back a `None`. 
+
+Now, Let's see what happens if we cast some spells with our wand, and then call the `priorIncantato` function. 
 
 ```sh
 scala> wand.castSpell(expelliarmus)
@@ -103,9 +107,19 @@ spell: Option[Spell] = Some(Expelliarmus())
 
 ```
 
-This time, the function returned `Some(Expelliarmus())`. `Option` is an abstract class in Scala, with two possible subclasses, `Some` or `None`. 
-In general, an `Option[A]` can return `Some(A)` or `None`. If you want to access the spell, we would call `spell.get`.
+This time, the function returned `Some(Expelliarmus())`. 
 
+Bringing this together:
+
+1. `Option` is an abstract class in Scala, with two possible subclasses, `Some` or `None`.
+2. This means that the `priorIncantaton(wand:Wand): Option[Spell]` function will return either `Some(Spell)` or `None`. 
+3. In general, an `Option[A]` can either be `Some(A)` or `None`. 
+
+In Scala, you will encounter Options way more often than you will encounter `null`s. 
+Here are some links that you might find interesting: 
+1. [Null References - The Billion Dollar Mistake](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/)
+2. [Scaladocs on the Option abstract class](https://www.scala-lang.org/api/2.12.8/scala/Option.html)
+3. [Pottermore on Prior Incantato](https://pottermore.fandom.com/wiki/Prior_Incantato)
 
 
 

@@ -62,7 +62,7 @@ The code above would work just fine!
 spell: Spell = null
  ```
  
- But now, we have to remember the `val spell` could potentially be null. If we tried to use it, we might encounter a frustrating `NullPointerException`.
+ But now, we have to remember that the `val spell` could potentially be null. If we tried to use it, we might encounter a frustrating `NullPointerException`.
  
  ```sh 
  scala> spell.getClass
@@ -96,7 +96,7 @@ res8: Class[_ <: Option[Spell]] = class scala.None$
 
 Yay -- we don't have a runtime error anymore! We simply get back a `class scala.None`, which represents to `None` class.
 
-Let's cast a spell with our wand, and then call the `priorIncantato` function. 
+Let's cast a spell with our wand, and then call the `priorIncantato` function: 
 
 ```sh
 scala> wand.castSpell(expelliarmus)
@@ -118,7 +118,7 @@ This time, the function returns `Some(Expelliarmus())`. The value stored in `spe
 
 ____
 
-Here are some links that you might find interesting: 
+Options provide us with a handy way of representing missing values. Here are some links that you might find interesting: 
 1. [Null References - The Billion Dollar Mistake](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/)
 2. [Scaladocs on the Option abstract class](https://www.scala-lang.org/api/2.12.8/scala/Option.html)
 3. [Pottermore on Prior Incantato](https://pottermore.fandom.com/wiki/Prior_Incantato)

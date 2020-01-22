@@ -89,4 +89,4 @@ ____
 Here are some links that you might find interesting: 
 1. [Code on github](PatternMatching1.scala)
 2. [Scaladocs on Pattern Matching ](https://docs.scala-lang.org/tour/pattern-matching.html)
-3. [Pottermore on Prior Incantato](https://pottermore.fandom.com/wiki/Prior_Incantato)
+3. [The Potion Puzzle on Pottermore](https://pottermore.fandom.com/wiki/The_Potion_Puzzle)

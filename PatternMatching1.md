@@ -1,4 +1,4 @@
-Pattern Matching might seem a bit puzzling at first. Luckily, we don't have the pressure of stopping Voldemort from getting the Sorceror's Stone. The Potions Puzzle was one of the challenges that protected the Sorcerers Stone, which could be used to create the elixer of life and grant it's owner immportality. 
+Pattern Matching might seem a bit puzzling. But imagine having to solve a puzzle to prevent Voldemort from getting his hands on the Sorceror's Stone! The Potions Puzzle was one of the challenges that protected the Sorcerers Stone. As we all know, that stone could be used to create the elixer of life and grant it's owner immportality. 
 
 There are seven potion bottles in the puzzle. Drinking the wrong bottle could kill you -- but one bottle contains a potion that would allow you to progress. Let's write some scala code to represent our potion bottles. 
 

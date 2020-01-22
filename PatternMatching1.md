@@ -59,7 +59,8 @@ def checkBottle(bottle:Potion): String =
   
 ```
 
-The above code block matches on `potion.content`. The last case block, `case _` is a catch-all. You can think of it as a default block, or a match-anything. 
+The above code block looks at `potion.content` and tries to find a 'pattern' to 'match' it with.
+It specifies four strings explicitly to match on.  The last case, `case _` is a catch-all. You can think of it as a default block, or a match-anything. 
 
 Let's test this function: 
 

@@ -83,9 +83,9 @@ res7: String = this bottle has an unknown substance
 
 ```
 
-As expected, Amortentia matched on our default case statement, and we know that our function cannot recognize it. 
+As expected, Amortentia matched on our default case statement. 
 
-I hope you learnt a little bit about the basics of Pattern Matching in Scala. We covered a fairly simple example, but we can do more complex things with pattern matching. We will cover those in the next article. 
+I hope you learnt a little bit about the basics of Pattern Matching in Scala. We will cover a more complex use case soon!
 ____
 
 Here are some links that you might find interesting: 

@@ -89,6 +89,6 @@ I hope you learnt a little bit about the basics of Pattern Matching in Scala. We
 ____
 
 Here are some links that you might find interesting: 
-1. [View this article on github](PatternMatching1.md)
+1. [View this article on github](https://github.com/kamyashethia/ScalaForThePotterhead/blob/master/PatternMatching1.md)
 2. [Scaladocs on Pattern Matching ](https://docs.scala-lang.org/tour/pattern-matching.html)
 3. [The Potion Puzzle on Pottermore](https://pottermore.fandom.com/wiki/The_Potion_Puzzle)

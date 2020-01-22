@@ -1,6 +1,6 @@
 Pattern Matching might seem a bit puzzling. But imagine having to solve a puzzle to prevent Voldemort from getting his hands on the Sorceror's Stone! The Potions Puzzle was one of the challenges that protected the Sorcerers Stone in the very first Harry Potter book. As we all know, this stone could be used to create the elixer of life and grant it's owner immortality. 
 
-There are seven potion bottles in the puzzle. Drinking the wrong bottle could kill you -- but one bottle contains a potion that would allow you to progress. Let's write some scala code to represent our potion bottles. 
+There are seven potion bottles in the puzzle. Drinking the wrong bottle could kill you -- but one bottle contained a potion that would allow you to progress. Let's write some scala code to represent our potion bottles. 
 
 ```scala 
 
